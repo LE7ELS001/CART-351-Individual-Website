@@ -1,0 +1,303 @@
+a {
+    color: #0f0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600&display=swap');
+
+
+
+body {
+    font-family: "Source Code Pro", monospace;
+    background-color: #0a0a0a;
+    color: #0f0;
+    line-height: 1.8;
+    padding: 20px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    animation: flicker 0.18s ease-out;
+}
+
+
+@keyframes flicker {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.scanline {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(to bottom,
+            rgba(0, 255, 0, 0.07),
+            rgba(0, 255, 0, 0.07) 2px,
+            rgba(0, 0, 0, 0.1) 3px);
+    pointer-events: none;
+    z-index: 999;
+    animation: scanline 12s linear infinite;
+}
+
+@keyframes scanline {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 100%;
+    }
+}
+
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    margin: 40px auto;
+    position: relative;
+    border: 6px solid #0f0;
+    padding: 50px;
+    background-color: #000;
+    box-shadow: 0 0 25px rgba(0, 255, 0, 0.4);
+}
+
+
+
+.pixel-corner {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #0f0;
+}
+
+.top-left {
+    top: -6px;
+    left: -6px;
+}
+
+.top-right {
+    top: -6px;
+    right: -6px;
+}
+
+.bottom-left {
+    bottom: -6px;
+    left: -6px;
+}
+
+.bottom-right {
+    bottom: -6px;
+    right: -6px;
+}
+
+
+
+.alien {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background-color: #0f0;
+    z-index: 5;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.alien-1 {
+    top: 15px;
+    left: 15px;
+}
+
+.alien-2 {
+    top: 15px;
+    right: 15px;
+    transform: scaleX(-1);
+    animation-delay: 1s;
+}
+
+.alien-3 {
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: .5s;
+}
+
+
+
+.content-box {
+    background-color: #111;
+    padding: 40px;
+    border: 3px solid #0a0;
+    margin-bottom: 40px;
+}
+
+
+
+.title h1,
+.title h2,
+.title h3 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 0 #090;
+}
+
+/* Typing effect for main title */
+.title h1 {
+    font-size: 42px;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #0f0;
+    animation: typing 2.2s steps(22), blink 0.6s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+
+.content-text p {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    margin-bottom: 22px;
+    text-align: justify;
+}
+
+
+
+pre,
+code {
+    background: #001900;
+    color: #00ff66;
+    padding: 10px;
+    border-radius: 5px;
+    display: block;
+    margin: 15px auto;
+    overflow-x: auto;
+    font-size: 16px;
+    line-height: 1.7;
+    border: 1px solid #00ff66;
+
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.nav-btn {
+    flex: 1;
+    text-align: center;
+    padding: 15px 25px;
+    background-color: #000;
+    color: #0f0;
+    border: 3px solid #0f0;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+    box-shadow: 5px 5px 0 #090;
+}
+
+.nav-btn:hover {
+    background-color: #0f0;
+    color: #000;
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 #090;
+}
+
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+
+    .title h1 {
+        font-size: 26px;
+    }
+
+    .content-text p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .alien {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-btn {
+        width: 100%;
+    }
+}
+
+.homepage-title {
+    font-size: 36px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.article-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
