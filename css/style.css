@@ -1,0 +1,51 @@
+body {
+    font-family: 'Fira Code', monospace;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.cursor-blink {
+    animation: blink 1s step-end infinite;
+}
+
+
+.terminal-text {
+    font-family: 'Fira Code', monospace;
+    font-size: 15px;
+    white-space: pre;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#about-box {
+    border-left: 2px solid #00ff88;
+    padding-left: 14px;
+    margin-top: 8px;
+    max-width: 600px;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.file-link:hover span {
+    color: #00ff9d !important;
+    text-decoration: underline;
+}
+
+.command:hover {
+    color: #00ffaa;
+    cursor: pointer;
+}
