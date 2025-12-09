@@ -21,7 +21,7 @@
 | → [Download Exercise 3](https://download-directory.github.io/?url=https://github.com/LE7ELS001/CART-351-Individual-Website/tree/main/Exercise%20and%20Project/Tianshun%20and%20Junming%20ex3/ex_3) | Exercise 3 files |
 | → [Download Exercise 4](https://download-directory.github.io/?url=https://github.com/LE7ELS001/CART-351-Individual-Website/tree/main/Exercise%20and%20Project/Tianshun%20and%20Junming%20ex4) | Exercise 4 files |
 | → [Download Exercise 5](https://download-directory.github.io/?url=https://github.com/LE7ELS001/CART-351-Individual-Website/tree/main/Exercise%20and%20Project/Tianshun_Wu_Junming_He_exercise5) | Exercise 5 files |
-| [Journal link](https://le7els001.github.io/CART-351-Journals/) | Weekly learning journal documents. |
+| [Journal link](https://le7els001.github.io/CART-351-Individual-Website/journal.html) | Weekly learning journal documents. |
 
 
 
